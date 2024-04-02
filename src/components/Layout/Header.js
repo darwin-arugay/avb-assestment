@@ -11,6 +11,7 @@ import { openCommentsModal } from "store/slices/view";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    height: 60,
   },
 
   title: {
@@ -22,7 +23,9 @@ const Header = () => {
   const classes = useStyles();
   const dispatch = useDispatch();
 
-  const handleOpen = () => dispatch(openCommentsModal());
+  const handleOpen = () => {
+    dispatch(openCommentsModal());
+  };
 
   return (
     <AppBar position="fixed" className={classes.root}>

@@ -1,21 +1,18 @@
 import React from "react";
 
 import "app/App.css";
-import logo from "app/logo.svg";
-import Header from "components/Header";
 import CommentModal from "components/CommentModal";
+import Comments from "components/Comments";
+import Layout from "components/Layout";
+import TopCommentors from "components/TopCommentors";
 
 function App() {
   return (
-    <>
-      <Header />
-
+    <Layout>
+      <TopCommentors />
+      <Comments />
       <CommentModal />
-
-      <div className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </div>
-    </>
+    </Layout>
   );
 }
 
