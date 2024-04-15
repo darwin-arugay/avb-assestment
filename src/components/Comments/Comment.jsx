@@ -32,12 +32,13 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Comment({ name, comment, likes }) {
   const formattedName = capitalize(name);
+  console.log({ formattedName });
   const classes = useStyles();
   return (
     <React.Fragment>
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
-          <Avatar alt={formattedName} />
+          <Avatar alt={formattedName}>{formattedName[0]}</Avatar>
         </ListItemAvatar>
         <ListItemText
           primary={formattedName}

@@ -33,7 +33,7 @@ export default function TopCommentors() {
                 horizontal: "right",
               }}
             >
-              <Avatar alt={commentor.name} />
+              <Avatar alt={commentor.name}>{commentor.name[0]}</Avatar>
             </Badge>
           </Tooltip>
         ))}
