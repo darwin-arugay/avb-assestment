@@ -8,7 +8,7 @@ const useStyles = makeStyles(() => ({
     marginTop: "80px",
     marginBottom: "80px",
     height: "100vh",
-    overflow: "hidden",
+    overflow: "auto",
   },
 }));
 
@@ -16,11 +16,9 @@ export default function Layout({ children }) {
   const classes = useStyles();
 
   return (
-    <main>
+    <main className={classes.root}>
       <Header />
-      <Container maxWidth="sm" className={classes.root}>
-        {children}
-      </Container>
+      <Container maxWidth="sm">{children}</Container>
       <Footer />
     </main>
   );

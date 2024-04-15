@@ -6,16 +6,24 @@ import {
   Container,
   Tooltip,
   Typography,
+  makeStyles,
 } from "@material-ui/core";
 import AvatarGroup from "@material-ui/lab/AvatarGroup";
 import { useSelector } from "react-redux";
 
 import { getTopThreeCommenters } from "store/slices/comment";
 
+const useStyles = makeStyles((theme) => ({
+  container: {
+    padding: theme.spacing(2),
+  },
+}));
+
 export default function TopCommentors() {
+  const classes = useStyles();
   const topThreeCommentors = useSelector(getTopThreeCommenters);
   return (
-    <Container>
+    <Container className={classes.container}>
       <Box mb={1}>
         <Typography variant="h6">
           Top 3 person who comment on this post.

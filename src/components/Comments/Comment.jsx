@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   inline: {
     display: "inline",
   },
-  actions: { display: "flex", alignItems: "center", gap: 5 },
+  actions: { display: "flex", alignItems: "center", gap: 5, flexWrap: "wrap" },
   buttonText: {
     textTransform: "capitalize",
     width: "fit-content",
@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Comment({ name, comment, likes }) {
   const formattedName = capitalize(name);
-  console.log({ formattedName });
+
   const classes = useStyles();
   return (
     <React.Fragment>
